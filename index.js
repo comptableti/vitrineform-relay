@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 const app = express();
 app.use(express.json());
 
-app.use('/', async (req, res) => {
+app.get('/', async (req, res) => {
     res.json({
         message: 'Welcome to the Proxy Server',
         status: 'Running'
