@@ -11,7 +11,7 @@ app.get('/', async (req, res) => {
     });
 });
 
-const relays = new Router();
+const relays = Router();
 relays.post("/vitrineform", async (req, res) => {
 
  const targetUrl = 'http://54.39.96.18:3003/emails/send/vitrineform';
