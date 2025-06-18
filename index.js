@@ -11,11 +11,6 @@ app.use('/', async (req, res) => {
     });
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log('Proxy listening on port', PORT);
-});
-
 const relays = new Router();
 relays.post("/vitrineform", async (req, res) => {
 
@@ -35,5 +30,8 @@ relays.post("/vitrineform", async (req, res) => {
 
 });
 
-
 app.use('/relays', relays);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log('Proxy listening on port', PORT);
+});
