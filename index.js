@@ -18,8 +18,8 @@ relays.post("/vitrineform", async (req, res) => {
   try {
     const proxyRes = await fetch(targetUrl, {
       method: req.method,
-      headers: {contentType: 'application/json'},
-      body: req.body,
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(req.body),
     });
     
     const body = await proxyRes.text();
