@@ -1,8 +1,10 @@
 import express, { Router } from 'express';
 import fetch from 'node-fetch';
+import cors from 'cors';
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.get('/', async (req, res) => {
     res.json({
